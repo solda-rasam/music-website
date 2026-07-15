@@ -42,6 +42,5 @@ Due to GitHub's file size limits and to keep this repository lightweight, the **
 ## 💻 How to Run
  1. **Clone or download** this repository to your local machine.
  2. Download the media files from the **Releases** section and place them in the correct folders as explained in the *Important Note* above.
- 3. Open the main HTML files inside the musicshop/HTML/ folder in your browser to view the frontend.
+ 3. Open the index HTML files inside the musicshop/HTML/ folder in your browser to view the frontend.
  4. Navigate to the backend/ folder and run your local server instructions to start the backend.
-```
