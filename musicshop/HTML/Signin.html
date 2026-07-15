@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link href="../CSS/Stylelogin.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign in</h2>
+        <form id="signinForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="re_password">Re Password:</label>
+            <input type="password" id="re_password" name="re_password" required>
+            
+            <label for="Phone">Phone:</label>
+            <input type="tel" id="Phone" name="Phone" required>
+            
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email">
+            
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signinForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const rePassword = document.getElementById('re_password').value;
+            const phone = document.getElementById('Phone').value;
+            const email = document.getElementById('Email').value;
+
+            if (password !== rePassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password, phone, email })
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    alert("Registration successful! You can now log in.");
+                    window.location.href = "Login.html";
+                } else {
+                    alert("Error: " + data.detail);
+                }
+            } catch (error) {
+                alert("Unable to connect to the server.");
+            }
+        });
+    </script>
+</body>
+</html>

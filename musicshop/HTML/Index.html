@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Melody</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width-device-width,initial-scale=1.0" />
+  <link href="../CSS/Stylemain.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="b-img">
+    <div class="n1" id="auth-buttons">
+      <button><a href="../HTML/Signin.html">ثبت نام</a></button>
+      <button><a href="../HTML/Login.html">ورود</a></button>
+    </div>
+    <div class="banner">
+      <p id="head1">melody</p>
+    </div>
+    <div class="banner">
+      <p id="head2">
+Melody site with the most diverse styles from the best singers from all over the world      </p>
+    </div>
+  </div>
+
+  <aside dir="rtl">
+    <a href="Index.html">Home page</a><br />
+    <a href="Sonati.html">Traditional</a><br />
+    <a href="pop.html">pop</a><br />
+    <a href="rock.html">rock</a><br />
+    <a href="hiphop.html">hip hop </a><br />
+    <a href="deephouse.html">Deep House</a><br />
+    <a href="classic.html">classic</a><br />
+    <a href="electronic.html">electronic</a><br />
+    <a href="jazz.html">jazz</a><br />
+    <a href="bikalam.html">instrumental</a><br />
+    <a href="metal.html">metal</a><br />
+    <a href="dance.html">dance</a><br />
+    <a href="R&B.html">R & B</a><br />
+  </aside>
+
+  <section class="section-1">
+    <h1 class="h-title1">جدید ترین ها</h1>
+    <div class="gallery1">
+      <article class="card1">
+        <figure>
+          <a href="../HTML/hamim.html" target="_blank">
+            <img src="../Images/porbazdid22.jpg" alt="hamim">
+            <figcaption>
+              <h3>راز شب - حامیم</h3>
+            </figcaption>
+          </a>
+        </figure>
+
+      </article>
+      <article class="card1">
+        <figure>
+          <a href="../HTML/moeinz.html" target="_blank">
+            <img src="../Images/porbazdid3.jpg" alt="moeinz">
+            <figcaption>
+              <h3>من خوابم نمیبره - معین زندی</h3>
+            </figcaption>
+          </a>
+        </figure>
+
+      </article>
+      <article class="card1">
+        <figure>
+          <a href="../HTML/yeganeh.html" target="_blank">
+            <img src="../Images/porbazdid1.jpg" alt="mohsenyeganeh">
+            <figcaption>
+              <h3> درندشت - محسن یگانه</h3>
+            </figcaption>
+          </a>
+        </figure>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h1 class="h-title2">محبوب ترین ها</h1>
+    <div class="gallery2">
+      <article class="card2">
+        <figure>
+          <a href="../HTML/haamim.html" target="_blank">
+
+            <img src="../Images/hamim.jpg" alt="hamim">
+            <figcaption>
+              <h3>سیاه و سفید - حامیم</h3>
+            </figcaption>
+          </a>
+        </figure>
+      </article>
+      <article class="card2">
+        <figure>
+          <a href="../HTML/shervin.html" target="_blank">
+
+            <img src="../Images/shervin.jpg" alt="shervin">
+            <figcaption>
+              <h3>برای -شروین حاجی پور</h3>
+            </figcaption>
+          </a>
+        </figure>
+      </article>
+      <article class="card2">
+        <figure>
+          <a href="../HTML/yasini.html" target="_blank">
+
+            <img src="../Images/yasini.jpg" alt="aliyasini">
+            <figcaption>
+              <h3>نده قول - علی یاسینی<h3>
+            </figcaption>
+          </a>
+        </figure>
+      </article>
+    </div>
+    <section>
+      <h1 class="h-title3">پربازدید ترین ها</h1>
+      <div class="gallery3">
+        <article class="card3">
+          <figure>
+            <a href="../HTML/chavoshi.html" target="_blank">
+
+              <img src="../Images/chavosho.jpg" alt="chavosh">
+              <figcaption>
+                <h3>امیر بی گزند - محسن چاوشی</h3>
+              </figcaption>
+            </a>
+          </figure>
+        </article>
+        <article class="card3">
+          <figure>
+            <a href="../HTML/jam.html" target="_blank">
+
+              <img src="../Images/jam.jpg" alt="mehradjam">
+              <figcaption>
+                <h3>هی - مهرادجم</h3>
+              </figcaption>
+            </a>
+          </figure>
+        </article>
+        <article class="card3">
+          <figure>
+            <a href="../HTML/alizadeh.html" target="_blank">
+
+              <img src="../Images/alizade.jpg" alt="alizadeh">
+              <figcaption>
+                <h3>تو بری - محمد علیزاده</h3>
+              </figcaption>
+            </a>
+
+          </figure>
+        </article>
+      </div>
+
+      <footer id="main-footer">
+        <div id="footright">
+       </div>
+        <div id="footerleft">
+          <a>how to contact us<br></a>
+          <a href="../HTML/pasokhha.html" target="_blank"> answer to questions<br></a>
+
+        </div>
+        <img src="../Images/logo.jpeg" alt="logo" class="logo">
+      </footer>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const username = localStorage.getItem('username');
+          const authContainer = document.getElementById('auth-buttons');
+
+          if (username) {
+              // تغییر ظاهر دکمه‌ها به پیغام خوش‌آمدگویی و دکمه خروج
+              authContainer.innerHTML = `
+                  <span style="color: white; margin-right: 15px; font-weight: bold; font-family: sans-serif;">Welcome, ${username}!</span>
+                  <button id="logoutBtn" style="cursor: pointer; padding: 5px 10px; border-radius: 5px; border: none; background-color: #ff4d4d; color: white;">Logout</button>
+              `;
+
+              // عملکرد دکمه خروج (Logout)
+              document.getElementById('logoutBtn').addEventListener('click', () => {
+                  localStorage.removeItem('username'); // پاک کردن نام کاربر از حافظه
+                  alert("Logged out successfully.");
+                  window.location.reload(); // لود مجدد صفحه برای بازگشت دکمه‌ها به حالت پیش‌فرض
+              });
+          }
+      });
+    </script>
+</body>
+
+</html>
