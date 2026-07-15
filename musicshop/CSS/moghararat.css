@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
+      url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
+      url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: vazir;
+  text-decoration: none;
+  color: #eae7e4;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../Images/-7.jpg) center/cover no-repeat fixed;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 13rem;
+  background: linear-gradient(
+    hsla(265, 100%, 9%, 0.9),
+    hsla(265, 100%, 9%, 0.9)
+  );
+  padding: 10px;
+  box-shadow: 5px 5px 50px hsla(0, 0%, 0%, 0.1);
+}
+
+aside a {
+  background-color: hsl(272, 100%, 6%);
+  display: flex;
+  flex-direction: column;
+  width: 192px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--color);
+  text-decoration: none;
+}
+
+#main-footer {
+  background: linear-gradient(
+    hsla(265, 100%, 9%, 0.9),
+    hsla(265, 100%, 9%, 0.9)
+  );
+  color: #fff;
+  text-align: center;
+  top: 86px;
+  position: relative;
+  height: 150px;
+  float: left;
+  width: 86.5%;
+  padding: 10px 20px;
+  display: flex;
+  text-align: right;
+}
+
+#footright {
+  position: absolute;
+  line-height: 40px;
+  left: 1190px;
+}
+
+#footerleft {
+  position: absolute;
+  line-height: 40px;
+  left: 600px;
+}
+.logo {
+  border-radius: 50%;
+}
+
+.main-title {
+  direction: rtl;
+}
+
+.title-1 {
+  margin: 50px 280px 0px 0px;
+}
+
+.title-2 {
+  margin-right: 280px;
+  max-width: 1200px;
+  line-height: 23px;
+}
