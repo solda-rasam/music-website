@@ -37,7 +37,7 @@ Due to GitHub's file size limits and to keep this repository lightweight, the **
 ```
 ## 🚀 Technologies Used
  * **Frontend:** HTML5, CSS3, JavaScript
- * **Backend:** [Insert your backend technology here, e.g., Node.js / PHP / Python]
+ * **Backend:**  Python
  * **Version Control:** Git & GitHub
 ## 💻 How to Run
  1. **Clone or download** this repository to your local machine.
